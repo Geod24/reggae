@@ -270,7 +270,6 @@ auto fullDub(in string projectPath) @trusted {
     import dub.internal.vibecompat.inet.path: NativePath;
 
     auto dub = new DubClass(projectPath);
-    dub.packageManager.getOrLoadPackage(NativePath(projectPath));
     dub.loadPackage();
     dub.project.validate();
 
